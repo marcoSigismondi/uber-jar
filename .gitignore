@@ -1,0 +1,6 @@
+uber-jar-module/uber-jar-webapp/target/*
+uber-jar-module/uber-jar-webapp/.*
+uber-jar-module/uber-jar-environment/tomcat.8080/*
+uber-jar-module/uber-jar-environment/target/*
+uber-jar-module/uber-jar-environment/.*
+uber-jar-module/.*
