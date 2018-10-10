@@ -11,7 +11,7 @@ public class Endpoint {
 
 	Logger logger = LoggerFactory.getLogger(Endpoint.class);
 
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping()
 	public String getMessage(String input) {
 		return input;
 	}

@@ -10,12 +10,11 @@
 	</parent>
 	
 	<artifactId>uber-jar-webapp</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>uber-jar-webapp Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<tomcat.version>8.5.23</tomcat.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -69,22 +68,15 @@
 			<version>1.7.25</version>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<finalName>uber-jar-webapp</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>war</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+		<resources>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>META-INF/resources</targetPath>
+            </resource>
+        </resources>
 	</build>
+	
 </project>
